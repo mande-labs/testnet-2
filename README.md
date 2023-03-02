@@ -26,13 +26,13 @@ Validators earn the following fees:
 
 - Two or more CPU cores
 - At least 100 GB of disk storage
-- At least 4 GB of memory
+- At least 8 GB of memory
 
 ** HDD not recommended **
 
 #### Binaries
 
-Download our binaries from [here](https://github.com/mande-labs/testnet-1/blob/main/mande-chaind) and place it in your bin path. Ex: `/usr/local/bin/`
+Download our binaries from [here](https://github.com/mande-labs/testnet-2/blob/main/mande-chaind) and place it in your bin path. Ex: `/usr/local/bin/`
 
 #### Generate keys
 ```bash
@@ -45,22 +45,20 @@ mande-chaind keys add [key_name] --recover
  to regenerate keys with your BIP39 mnemonic
  
 #### Claim testnet coins
-```bash
-curl -d '{"address":"mande...<mande wallet address>"}' -H 'Content-Type: application/json' http://35.224.207.121:8080/request
-```
+Join our discord if you haven't already and claim coins from [#faucet-requests](https://discord.gg/VmKYxQJSTM) channel
 
 #### Setting up a Node
-Following steps  are  rudimentary way of setting up a validator, For production we advise your [sentry architecture](https://forum.cosmos.network/t/sentry-node-architecture-overview/454) to create well defined process
+Following steps  are  rudimentary way of setting up a validator, For production we advise using [sentry architecture](https://forum.cosmos.network/t/sentry-node-architecture-overview/454) to create well defined process
 
 * Initialize node
 	```shell
-	mande-chaind init {{NODE_NAME}} --chain-id mande-testnet-1
+	mande-chaind init {{NODE_NAME}} --chain-id mande-testnet-2
 	```
-* Replace the contents of your `${HOME}/.mande-chaind/config/genesis.json` with that of [genesis file](https://github.com/mande-labs/testnet-1/blob/main/genesis.json) on this repo
-* Verify checksum `jq -S -c -M "" genesis.json | sha256sum` matches `def6850afe2cb311b7909cdc9bfb6dd436b36a6fc015c3d524270a5cff050dfe`
+* Replace the contents of your `${HOME}/.mande-chaind/config/genesis.json` with that of [genesis file](https://github.com/mande-labs/testnet-2/blob/main/genesis.json) on this repo
+* Verify checksum `jq -S -c -M "" genesis.json | sha256sum` matches `7c99dd466787de49a3d7430930d186d82a4c9f5683498730d2dbb6624e927313`
 * Inside file `${HOME}/.mande-chaind/config/config.toml`, 
-  * set `seeds` to `"cd3e4f5b7f5680bbd86a96b38bc122aa46668399@34.171.132.212:26656"`.
-  * set `persistent_peers` to `"ee8a1b98e931e81d32c52f0b489fa22b52778d7c@34.171.132.212:26656,6780b2648bd2eb6adca2ca92a03a25b216d4f36b@34.170.16.69:26656"`
+  * set `seeds` to `"@34.171.132.212:26656"`.
+  * set `persistent_peers` to `"@34.171.132.212:26656,9ecc4e3979b1a0cc2b18164c54e65fc7949fd62d@34.170.16.69:26656"`
   * If your node has a public ip, set it in `external_address = "tcp://<public-ip>:26656"`, else leave the filed empty.
 * Set `minimum-gas-prices` in `${HOME}/.mande-chaind/config/app.toml` with the minimum price you want (example `0.005mand`) for the security of the network.
 * Start node
@@ -119,7 +117,7 @@ mande-chaind tx staking edit-validator \
 System requirements:
 - Four or more CPU cores
 - At least 100 GB of disk storage
-- At least 4 GB of RAM
+- At least 16 GB of RAM
 
 Increase file limit
 ```bash
