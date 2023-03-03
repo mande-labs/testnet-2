@@ -32,7 +32,7 @@ Validators earn the following fees:
 
 #### Binaries
 
-- Clone this repository - `git clone --depth 1 --branch v1.2.1 https://github.com/mande-labs/mande-chain.git`
+- Clone this repository - `git clone --depth 1 --branch v1.2.2 https://github.com/mande-labs/mande-chain.git`
 - Run - `ignite chain build --release` to generate the binary and place it in your bin path. Ex: `/usr/local/bin/`
 
 #### Generate keys
@@ -58,7 +58,7 @@ Following steps  are  rudimentary way of setting up a validator, For production 
 * Replace the contents of your `${HOME}/.mande-chaind/config/genesis.json` with that of [genesis file](https://github.com/mande-labs/testnet-2/blob/main/genesis.json) on this repo
 * Verify checksum `jq -S -c -M "" genesis.json | sha256sum` matches `a4f3db3aa938f58532f557d436cb105b7a893c9fbb2d7ac194c9c6cec8b82df0`
 * Inside file `${HOME}/.mande-chaind/config/config.toml`, 
-  * set `persistent_peers` to `"de01f4e467ad663f7c802710d9a8f189ccf6c20c@34.171.132.212:26656,a301c9c7283afedfb4950aa6f9bf11857fc5181e@34.170.16.69:26656"`
+  * set `persistent_peers` to `"dbd1f5b01f010b9e6ae6d9f293d2743b03482db5@34.171.132.212:26656,1d1da5742bdd281f0829124ec60033f374e9ddac@34.170.16.69:26656"`
   * If your node has a public ip, set it in `external_address = "tcp://<public-ip>:26656"`, else leave the filed empty.
 * Set `minimum-gas-prices` in `${HOME}/.mande-chaind/config/app.toml` with the minimum price you want (example `0.005mand`) for the security of the network.
 * Start node
