@@ -32,7 +32,8 @@ Validators earn the following fees:
 
 #### Binaries
 
-Download our binaries from [here](https://github.com/mande-labs/testnet-2/blob/main/mande-chaind) and place it in your bin path. Ex: `/usr/local/bin/`
+- Clone this repository - `git clone --depth 1 --branch v1.2.1 https://github.com/mande-labs/mande-chain.git`
+- Run - `ignite chain build --release` to generate the binary and place it in your bin path. Ex: `/usr/local/bin/`
 
 #### Generate keys
 ```bash
@@ -55,10 +56,9 @@ Following steps  are  rudimentary way of setting up a validator, For production 
 	mande-chaind init {{NODE_NAME}} --chain-id mande-testnet-2
 	```
 * Replace the contents of your `${HOME}/.mande-chaind/config/genesis.json` with that of [genesis file](https://github.com/mande-labs/testnet-2/blob/main/genesis.json) on this repo
-* Verify checksum `jq -S -c -M "" genesis.json | sha256sum` matches `7c99dd466787de49a3d7430930d186d82a4c9f5683498730d2dbb6624e927313`
+* Verify checksum `jq -S -c -M "" genesis.json | sha256sum` matches `a4f3db3aa938f58532f557d436cb105b7a893c9fbb2d7ac194c9c6cec8b82df0`
 * Inside file `${HOME}/.mande-chaind/config/config.toml`, 
-  * set `seeds` to `"@34.171.132.212:26656"`.
-  * set `persistent_peers` to `"@34.171.132.212:26656,9ecc4e3979b1a0cc2b18164c54e65fc7949fd62d@34.170.16.69:26656"`
+  * set `persistent_peers` to `"de01f4e467ad663f7c802710d9a8f189ccf6c20c@34.171.132.212:26656,a301c9c7283afedfb4950aa6f9bf11857fc5181e@34.170.16.69:26656"`
   * If your node has a public ip, set it in `external_address = "tcp://<public-ip>:26656"`, else leave the filed empty.
 * Set `minimum-gas-prices` in `${HOME}/.mande-chaind/config/app.toml` with the minimum price you want (example `0.005mand`) for the security of the network.
 * Start node
@@ -81,7 +81,7 @@ mande-chaind tx staking create-validator \
 --from {{KEY_NAME}} \
 --amount 0cred \
 --pubkey "$(mande-chaind tendermint show-validator)" \
---chain-id mande-testnet-1 \
+--chain-id mande-testnet-2 \
 --moniker="{{VALIDATOR_NAME}}" \
 --gas=auto --gas-adjustment=1.15
 ```
@@ -103,17 +103,17 @@ mande-chaind tx staking edit-validator \
 ##### Query outstanding rewards:
 `mande-chaind query distribution validator-outstanding-rewards mandevaloper...`
 ##### Withdraw rewards:
-`mande-chaind tx distribution withdraw-rewards mandevaloper... --commission --from {{KEY_NAME}} --chain-id mande-testnet-1`
+`mande-chaind tx distribution withdraw-rewards mandevaloper... --commission --from {{KEY_NAME}} --chain-id mande-testnet-2`
 ##### Cast/Uncast vote:
-- `mande-chaind --from {{KEY_NAME}} --chain-id mande-testnet-1 tx voting create-vote [validator_address_to_vote] [amount] [mode]`
+- `mande-chaind --from {{KEY_NAME}} --chain-id mande-testnet-2 tx voting create-vote [validator_address_to_vote] [amount] [mode]`
 
 - `amount` can be positive or negative (make sure, -1000000000 < amount < 1000000000, otherwise there might be unexpected behaviour which will be fixed in next phase), `mode` - 1 for cast, 0 for uncast.
 
-- Cast Ex: `mande-chaind --from {{KEY_NAME}} --chain-id mande-testnet-1 tx voting create-vote mande... 10000000 1`
+- Cast Ex: `mande-chaind --from {{KEY_NAME}} --chain-id mande-testnet-2 tx voting create-vote mande... 10000000 1`
 
-- Uncast Ex: `mande-chaind --from {{KEY_NAME}} --chain-id mande-testnet-1 tx voting create-vote mande... 10000000 0`
+- Uncast Ex: `mande-chaind --from {{KEY_NAME}} --chain-id mande-testnet-2 tx voting create-vote mande... 10000000 0`
 
-#### Additional node performance config
+#### Additional node config
 System requirements:
 - Four or more CPU cores
 - At least 100 GB of disk storage
@@ -126,13 +126,12 @@ ulimit -n 65536
 
 Update ~/.mande-chain/config/config.toml
 * log_level = "error"
+* max_packet_msg_payload_size = 10240
 * send_rate = 20000000
 * recv_rate = 20000000
-* max_packet_msg_payload_size = 10240
 * flush_throttle_timeout = "50ms"
 * mempool.size = 10000
 * create_empty_blocks = false
 * indexer = "null" [If you are not running explorers using same rpc]
-* persistent_peers = "ee8a1b98e931e81d32c52f0b489fa22b52778d7c@34.171.132.212:26656,6780b2648bd2eb6adca2ca92a03a25b216d4f36b@34.170.16.69:26656" [Verify]
 
 Delete ~/.mande-chain/config/addrbook.json [It will be generated freshly]

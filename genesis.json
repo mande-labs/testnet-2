@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-03-02T02:26:48.343708257Z",
+  "genesis_time": "2023-03-03T03:34:18.795927379Z",
   "chain_id": "mande-testnet-2",
   "initial_height": "1",
   "consensus_params": {
@@ -33,56 +33,56 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mande1w9q9ng3zlhswjm9pm4hkh7eh5zwq33h2svxv5y",
+          "address": "mande182dpn8dpdgvxrfhkpk374fyxqqjrxxr7nfzqkm",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mande1d8a3xzerajsz2xlgunrau2hyhjgendylp0222d",
+          "address": "mande177r5d9a58z5kft56vvajeffy4c4wzry8rf3kkc",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mande17wjtv6athamgppx0rnl8d0dxlwy8xzgf7mrg5m",
+          "address": "mande1fdfwgq7ye0qadpqvzj6ckgcw87tcht5znn8jaw",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mande1c3rhzanx5d4ppm4r8qfngx5ry8pjjvznp5s23y",
+          "address": "mande10d372qxyw6054t2un36kh0782r4z8utx2m0pmz",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mande17jpv0u9wvjuwfxr8gdeucfmxaguz3jsgjxrm8w",
+          "address": "mande1877nq7c7dacc8rt20sjaqcgdvrj7x62s7jr54s",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mande1jrk6es52m6l26h7pgdmdncjs0jn08r6na09yyv",
+          "address": "mande1gcpdyrhqjwvam3xr9l024uut87kcpxfx7e307d",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mande1p62qgsq3qmhht45j4dqm0e2xpr8fh9kc8886gk",
+          "address": "mande1mpvlr97vnxq4849h3lda4twz8mc7cv9u7zz62r",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mande1je93587rugt490cyyrkp067ehlza02ctgj0gan",
+          "address": "mande14c2s94g0nc9n8fn9hx0pmad2ujcm7qgwzzglrz",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
@@ -104,29 +104,7 @@
       },
       "balances": [
         {
-          "address": "mande1p62qgsq3qmhht45j4dqm0e2xpr8fh9kc8886gk",
-          "coins": [
-            {
-              "denom": "mand",
-              "amount": "1000000000000"
-            }
-          ]
-        },
-        {
-          "address": "mande1d8a3xzerajsz2xlgunrau2hyhjgendylp0222d",
-          "coins": [
-            {
-              "denom": "cred",
-              "amount": "500000000000"
-            },
-            {
-              "denom": "mand",
-              "amount": "5000000"
-            }
-          ]
-        },
-        {
-          "address": "mande1w9q9ng3zlhswjm9pm4hkh7eh5zwq33h2svxv5y",
+          "address": "mande182dpn8dpdgvxrfhkpk374fyxqqjrxxr7nfzqkm",
           "coins": [
             {
               "denom": "mand",
@@ -135,7 +113,7 @@
           ]
         },
         {
-          "address": "mande1jrk6es52m6l26h7pgdmdncjs0jn08r6na09yyv",
+          "address": "mande1877nq7c7dacc8rt20sjaqcgdvrj7x62s7jr54s",
           "coins": [
             {
               "denom": "mand",
@@ -144,7 +122,7 @@
           ]
         },
         {
-          "address": "mande1je93587rugt490cyyrkp067ehlza02ctgj0gan",
+          "address": "mande1gcpdyrhqjwvam3xr9l024uut87kcpxfx7e307d",
           "coins": [
             {
               "denom": "mand",
@@ -153,7 +131,7 @@
           ]
         },
         {
-          "address": "mande1c3rhzanx5d4ppm4r8qfngx5ry8pjjvznp5s23y",
+          "address": "mande1fdfwgq7ye0qadpqvzj6ckgcw87tcht5znn8jaw",
           "coins": [
             {
               "denom": "mand",
@@ -162,7 +140,7 @@
           ]
         },
         {
-          "address": "mande17wjtv6athamgppx0rnl8d0dxlwy8xzgf7mrg5m",
+          "address": "mande10d372qxyw6054t2un36kh0782r4z8utx2m0pmz",
           "coins": [
             {
               "denom": "mand",
@@ -171,11 +149,33 @@
           ]
         },
         {
-          "address": "mande17jpv0u9wvjuwfxr8gdeucfmxaguz3jsgjxrm8w",
+          "address": "mande14c2s94g0nc9n8fn9hx0pmad2ujcm7qgwzzglrz",
           "coins": [
             {
               "denom": "mand",
               "amount": "1000000000000"
+            }
+          ]
+        },
+        {
+          "address": "mande1mpvlr97vnxq4849h3lda4twz8mc7cv9u7zz62r",
+          "coins": [
+            {
+              "denom": "mand",
+              "amount": "1000000000000"
+            }
+          ]
+        },
+        {
+          "address": "mande177r5d9a58z5kft56vvajeffy4c4wzry8rf3kkc",
+          "coins": [
+            {
+              "denom": "cred",
+              "amount": "1000000000"
+            },
+            {
+              "denom": "mand",
+              "amount": "1000000"
             }
           ]
         }
@@ -237,19 +237,19 @@
                   "max_rate": "1.000000000000000000",
                   "max_change_rate": "0.000000000000000000"
                 },
-                "delegator_address": "mande1d8a3xzerajsz2xlgunrau2hyhjgendylp0222d",
-                "validator_address": "mandevaloper1d8a3xzerajsz2xlgunrau2hyhjgendyltrdjvu",
+                "delegator_address": "mande177r5d9a58z5kft56vvajeffy4c4wzry8rf3kkc",
+                "validator_address": "mandevaloper177r5d9a58z5kft56vvajeffy4c4wzry8f9kwsf",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "wIR8T3XwHZ847i8orUHaASv4II5dTfAF754agC0UByg="
+                  "key": "SvnPaXkbuOlan6mc86rcZfs2EfD4q1FUPfbNJwH1uao="
                 },
                 "value": {
                   "denom": "cred",
-                  "amount": "500000000000"
+                  "amount": "1000000000"
                 }
               }
             ],
-            "memo": "9ecc4e3979b1a0cc2b18164c54e65fc7949fd62d@10.128.0.21:26656",
+            "memo": "1d1da5742bdd281f0829124ec60033f374e9ddac@10.128.0.21:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -259,7 +259,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "As+SYG4e3j0Fa6L9IOsvHyclz9Vfi3oKd1AXK9ya9Zww"
+                  "key": "AsO7WxXdL28PtUKgrrfMMMehrscYPY0j2gG/HkJgUqKr"
                 },
                 "mode_info": {
                   "single": {
@@ -277,7 +277,7 @@
             }
           },
           "signatures": [
-            "CtPcFevZ+w8zOJnKEciJ0UKHx4VAVNqcqvhh2dskzN8BiUobDbrR0NTIG8OBlMUvm33cUr3hknEfXpebIKaQIA=="
+            "s956Bdhb4Wwp9xdIM1y9rrPwxXbEAWF2r7bLKLs/Rl4MXom3qLPm8GouMOw5ynSvILdCaV1cLXWrqdurcnFeDw=="
           ]
         }
       ]
