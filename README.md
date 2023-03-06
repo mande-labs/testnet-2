@@ -32,7 +32,7 @@ Validators earn the following fees:
 
 #### Binaries
 
-- Clone this repository - `git clone --depth 1 --branch v1.2.2 https://github.com/mande-labs/mande-chain.git`
+- Clone this repository - `git clone --branch v1.2.2 https://github.com/mande-labs/mande-chain.git`
 - Run - `ignite chain build --release` to generate the binary and place it in your bin path. Ex: `/usr/local/bin/`
 
 #### Generate keys
